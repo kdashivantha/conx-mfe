@@ -7,7 +7,7 @@
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@angular-devkit/build-angular:browser",
+      "executor": "@nx/angular:webpack-browser",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/gv",
@@ -17,7 +17,10 @@
         "tsConfig": "apps/gv/tsconfig.app.json",
         "assets": ["apps/gv/src/favicon.ico", "apps/gv/src/assets"],
         "styles": ["apps/gv/src/styles.scss"],
-        "scripts": []
+        "scripts": [],
+        "customWebpackConfig": {
+          "path": "apps/gv/webpack.config.js"
+        }
       },
       "configurations": {
         "production": {
@@ -33,7 +36,10 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/gv/webpack.prod.config.js"
+          }
         },
         "development": {
           "buildOptimizer": false,
@@ -47,7 +53,11 @@
       "defaultConfiguration": "production"
     },
     "serve": {
-      "executor": "@angular-devkit/build-angular:dev-server",
+      "executor": "@nx/angular:module-federation-dev-server",
+      "options": {
+        "port": 4200,
+        "publicHost": "http://localhost:4200"
+      },
       "configurations": {
         "production": {
           "browserTarget": "gv:build:production"
@@ -88,7 +98,8 @@
     "serve-static": {
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "gv:build"
+        "buildTarget": "gv:build",
+        "port": 4200
       }
     }
   }

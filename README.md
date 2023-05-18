@@ -4,28 +4,38 @@
 
 https://levelup.gitconnected.com/your-first-angular-microfrontend-58950768a465
 
-![](./readme/2023-05-18-10-40-43.png)
+![](./README/2023-05-18-10-40-43.png)
 
-![](./readme/2023-05-18-10-42-04.png)
+![](./README/2023-05-18-10-42-04.png)
 
 ### 1. create workspace for angular
 
 `npx create-nx-workspace@latest conx-mfe` default app gv
 
-### 2. add more angular apps and libs
+### 2. add more angular apps and libs with bindings
 
-`ng g @nrwl/angular:app --routing map`
+https://nx.dev/recipes/module-federation/dynamic-module-federation-with-angular
 
-`ng g @nrwl/angular:app --routing listview`
+`npx nx g @nx/angular:host gv`
 
-`ng g @nrwl/angular:app --routing passport`
+`npx nx g @nx/angular:remote map --host=gv`
+
+`npx nx g @nx/angular:remote listview --host=gv`
+
+`npx nx g @nx/angular:remote passport --host=gv`
+
+`npx nx g @nx/angular:remote login --host=gv`
 
 ### 3. set up more hosts (gv)
 
 already done--
-`nx generate @nrwl/angular:application gv`
+`nx generate @nx/angular:application gv`
 
 ### 4. module federation bindings
+
+### 5. remove app
+
+`nx g @nx/workspace:remove my-feature-lib`
 
 #
 
