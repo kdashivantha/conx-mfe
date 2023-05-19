@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
+import { Login2Component } from './login2/login2.component';
 
 @NgModule({
   declarations: [AppComponent],

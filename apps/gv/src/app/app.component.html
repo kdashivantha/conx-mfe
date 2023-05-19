@@ -4,6 +4,14 @@
   <li><a routerLink="listview">Listview</a></li>
   <li><a routerLink="passport">Passport</a></li>
   <li><a routerLink="login">Login</a></li>
+  <li><a routerLink="mfe1">MFE1</a></li>
 </ul>
 
+<ng-container #placeHolder></ng-container>
+
+<div>my name: {{viewStateService.name$ | async}}</div>
+
+<button (click)="openPassport()"> open passport</button>
+
+<button (click)="closePassport()"> close passport</button>
 <router-outlet></router-outlet>

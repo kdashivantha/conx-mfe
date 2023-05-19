@@ -1,0 +1,6 @@
+{
+  "map": "http://localhost:4201",
+  "listview": "http://localhost:4202",
+  "passport": "http://localhost:4203",
+  "login": "http://localhost:4204"
+}

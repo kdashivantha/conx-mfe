@@ -37,6 +37,10 @@ already done--
 
 `nx g @nx/workspace:remove my-feature-lib`
 
+### 6. nx shared modules
+
+![](./README/2023-05-18-16-02-56.png)
+
 #
 
 # NX HELP
