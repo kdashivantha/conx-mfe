@@ -15,12 +15,18 @@
         "main": "apps/gv/src/main.ts",
         "polyfills": ["zone.js"],
         "tsConfig": "apps/gv/tsconfig.app.json",
-        "assets": ["apps/gv/src/favicon.ico", "apps/gv/src/assets"],
+        "assets": [
+          "apps/gv/src/favicon.ico",
+          "apps/gv/src/assets",
+          "apps/gv/src/manifest.webmanifest"
+        ],
         "styles": ["apps/gv/src/styles.scss"],
         "scripts": [],
         "customWebpackConfig": {
           "path": "apps/gv/webpack.config.js"
-        }
+        },
+        "serviceWorker": true,
+        "ngswConfigPath": "apps/gv/ngsw-config.json"
       },
       "configurations": {
         "production": {
