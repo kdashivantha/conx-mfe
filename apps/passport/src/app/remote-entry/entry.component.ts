@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'conx-mfe-passport-entry',
   template: `
     <div class="wrapper">
-      <div class="container test">passport</div>
+      <div class="container test">passport 56565</div>
     </div>
   `,
 })

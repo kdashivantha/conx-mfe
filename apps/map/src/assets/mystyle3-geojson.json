@@ -1,0 +1,77 @@
+{
+  "version": 8,
+  "name": "states",
+  "glyphs": "{fontstack}/{range}",
+  "sources": {
+    "states": {
+      "type": "geojson"
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "rgba(0,0,0,0)"
+      }
+    },
+    {
+      "id": "landuse-industrial2",
+      "type": "fill",
+      "source": "states",
+      "layout": { "visibility": "visible" },
+      "paint": { "fill-color": "#329932", "fill-opacity": 1 },
+      "filter": ["==", "datatype", "green"]
+    },
+    {
+      "id": "waterway_tunnel",
+      "type": "line",
+      "source": "states",
+      "minzoom": 14,
+      "maxzoom": 17,
+      "layout": { "visibility": "visible" },
+      "paint": {
+        "line-color": "#323299",
+        "line-width": 1
+      },
+      "filter": ["==", "datatype", "sewer"]
+    },
+    {
+      "id": "waterway_tunnel434",
+      "type": "line",
+      "source": "states",
+      "minzoom": 17,
+      "layout": { "visibility": "visible" },
+      "paint": {
+        "line-color": "#323299",
+        "line-width": 2
+      },
+      "filter": ["==", "datatype", "sewer"]
+    },
+    {
+      "id": "trees_point",
+      "type": "circle",
+      "source": "states",
+      "minzoom": 15,
+      "layout": { "visibility": "visible" },
+      "paint": {
+        "circle-radius": 4,
+        "circle-color": "#fbb03b"
+      },
+      "filter": ["==", "datatype", "trees"]
+    },
+    {
+      "id": "trees_point_17",
+      "type": "circle",
+      "source": "states",
+      "minzoom": 12,
+      "maxzoom": 15,
+      "layout": { "visibility": "visible" },
+      "paint": {
+        "circle-radius": 1,
+        "circle-color": "#fbb03b"
+      },
+      "filter": ["==", "datatype", "trees"]
+    }
+  ]
+}

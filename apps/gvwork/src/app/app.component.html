@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand">
+      <h1>GeoVisia</h1>
+    </a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="map">Map</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="listview">Listview</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="passport">Passport</a>
+        </li>
+      </ul>
+      <div class="d-flex">
+        <div ngbDropdown class="d-inline-block">
+          <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+            Open new Windo
+
+          </button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button ngbDropdownItem>Map</button>
+            <button ngbDropdownItem>ListView</button>
+            <button ngbDropdownItem>Passport</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div>changed</div>
+<router-outlet></router-outlet>

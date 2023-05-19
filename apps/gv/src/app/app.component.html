@@ -1,11 +1,39 @@
-<ul class="remote-menu">
-  <li><a routerLink="/">Home</a></li>
-  <li><a routerLink="map">Map</a></li>
-  <li><a routerLink="listview">Listview</a></li>
-  <li><a routerLink="passport">Passport</a></li>
-  <li><a routerLink="login">Login</a></li>
-  <li><a routerLink="mfe1">MFE1</a></li>
-</ul>
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand">
+      <h1>GeoVisia</h1>
+    </a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="map">Map</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="listview">Listview</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="passport">Passport</a>
+        </li>
+      </ul>
+      <div class="d-flex">
+        <div ngbDropdown class="d-inline-block">
+          <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+            Open new Window
+
+          </button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button ngbDropdownItem>Map</button>
+            <button ngbDropdownItem>ListView</button>
+            <button ngbDropdownItem (click)="openPassport()">Passport</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
 
 <ng-container #placeHolder></ng-container>
 
@@ -15,3 +43,36 @@
 
 <button (click)="closePassport()"> close passport</button>
 <router-outlet></router-outlet>
+
+
+
+
+
+<div class="container-fluid py-3">
+  <div class="row my-3">
+    <div class="col">
+      <label for="exampleFormControlInput1" class="form-label">Email address</label>
+      <input type="email" class="form-control form-control-sm" id="exampleFormControlInput1"
+        placeholder="name@example.com">
+    </div>
+  </div>
+  <div class="row my-3">
+    <div class="col">
+      <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+      <textarea class="form-control form-control-sm" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+  </div>
+  <div class="row my-3">
+    <div class="col">
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+        <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+      </div>
+    </div>
+  </div>
+  <div class="row my-3">
+    <div class="col">
+      <button class="btn btn-sm btn-outline-primary" (click)="open()">Launch demo modal</button>
+    </div>
+  </div>
+</div>

@@ -42,4 +42,8 @@ export class AppComponent implements OnInit {
   closePassport() {
     this.viewStateService.closePassport();
   }
+
+  open() {
+    return;
+  }
 }

@@ -25,6 +25,23 @@
           "/*.(svg|cur|jpg|jpeg|png|apng|webp|avif|gif|otf|ttf|woff|woff2)"
         ]
       }
+    },
+    {
+      "name": "FederatedChunks",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "resources": {
+        "urls": [
+          "http://localhost:4201/remoteEntry.mjs?v=12",
+          "http://localhost:4202/remoteEntry.mjs?v=12",
+          "http://localhost:4203/remoteEntry.mjs?v=12",
+          "http://localhost:4204/remoteEntry.mjs?v=12",
+          "http://localhost:4201/*.js?v=12",
+          "http://localhost:4202/*.js?v=12",
+          "http://localhost:4203/*.js?v=12",
+          "http://localhost:4204/*.js?v=12"
+        ]
+      }
     }
   ]
 }

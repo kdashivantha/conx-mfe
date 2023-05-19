@@ -21,13 +21,13 @@ export class NxWelcomeComponent implements OnInit {
       .pipe(distinctUntilChanged())
       .subscribe(async (loggedIn: any) => {
         // Queue the navigation after initialNavigation blocking is completed
-        setTimeout(() => {
-          if (!loggedIn) {
-            this.router.navigateByUrl('login');
-          } else {
-            this.router.navigateByUrl('');
-          }
-        });
+        // setTimeout(() => {
+        //   if (!loggedIn) {
+        //     this.router.navigateByUrl('login');
+        //   } else {
+        //     this.router.navigateByUrl('');
+        //   }
+        // });
       });
   }
 }

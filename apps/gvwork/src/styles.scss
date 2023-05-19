@@ -1,3 +1,4 @@
+/* You can add global styles to this file, and also import other style files */
 //fonts
 //font-family: 'Inter', sans-serif;
 //font-family: 'Work Sans', sans-serif;
@@ -57,6 +58,8 @@ $custom-theme-colors: (
 $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 
 @import 'bootstrap/scss/bootstrap.scss';
+
+
 @import 'ol/ol.css';
 
 /*map style todo refactor*/
